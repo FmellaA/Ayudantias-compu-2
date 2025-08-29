@@ -16,7 +16,9 @@ def willans_prime(n):
     
     # Willan's formula for the nth prime
     def inner_sum(i):
-        """Se calcula la suma sobre j usando el teorema de Wilson para evitar los errores en el factorial dentro del coseno (error computacional por número muy grande)"""
+        """
+        Se calcula la suma sobre j usando el teorema de Wilson para evitar los errores en el factorial dentro del coseno (error computacional por número muy grande)
+        """
         total = 0
         for j in range(1, i+1):
             if j == 1:
