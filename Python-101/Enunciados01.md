@@ -20,7 +20,7 @@ con:
 
 $$
 \begin{align*}
-F(j) &= \cos^2[\pi \frac{(j+1)!mod{j}+1}{j}]\\
+F(j) &= \cos^2[\pi \frac{(j-1)mod{j}+1}{j}]\\
 &= 
 
 \begin{cases}
