@@ -19,8 +19,18 @@ for i in producto:
         P.append(i)
 P = P + [1]
 
-stg = ''
-for i in range(len(P)-1): 
-     stg = f'{P[i]}'+ '*' + stg
-stg = stg + f'{P[-1]}'
-print(f'{stg} = {N}')
+# stg = ''
+# for i in range(len(P)-1): 
+#      stg = f'{P[i]}'+ '*' + stg
+# stg = stg + f'{P[-1]}'
+# print(f'{stg} = {N}')
+if len(P) == 6: 
+    print(f"{P[0]*P[1]*P[2]}*{P[3]*P[4]*P[5]}") 
+elif len(P) == 5: 
+    print(f"{P[0]*P[1]*P[2]}*{P[3]*P[4]}")
+elif len(P) ==4: 
+    print(f"{P[0]*P[1]}*{P[3]*P[2]}")
+elif len(P) ==3: 
+    print(f"{P[0]*P[1]}*{P[2]}")
+elif len(P) ==2: 
+    print(f"{P[0]}*{P[1]}")
