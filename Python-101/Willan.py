@@ -58,7 +58,7 @@ if __name__ == "__main__":
     print("=========================================")
     
     # Calculamos los primos hasta el n deseado
-    for n in range(1,10):
+    for n in range(1,100):
         prime = willans_prime(n)
         print(f"The {n}th prime number is: {prime}")
     
