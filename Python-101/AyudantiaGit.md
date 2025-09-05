@@ -47,6 +47,35 @@ Finalmente, en cualquier momento podrán revisar el status del git (que document
 $ git status
 ```
 
+De todas formas, si quieren un detalle del trabajo que han estado haciendo, pueden utilizar: 
+
+```console
+$ git log
+```
+
+que les mostrará un registro de los últimos commits hechos. Donde cada commit aparecera con un código del commit junto a lo que dice: 
+
+```console 
+commit codigo314159265359eaeaeaIAPEACJEF (HEAD -> master)
+Author: Juanito Perez <juanitoperez@gmail.com>
+Date:   Thu Sep 4 23:40:56 2025 -0400
+
+    Hola Mundo
+```
+Este código es la identificación que tiene este commit. Por lo tanto, si por cualquier motivo hacen cambios y quieren volver al estado que estaban en el último commit hecho, solo deben hacer: 
+
+```console
+$ git restore
+```
+
+Pero, si hicieron varios commits, y se dieron cuenta que se equivocaron en todos y quieren volver al commit *"Hola Mundo"*, solo tienen que buscar su código del commit y hacer: 
+
+```console
+$ git revert codigo314159265359eaeaeaIAPEACJEF
+```
+
+Y se devolverán al estado del commit *"Hola Mundo"*. Para guardar los cambios, solo deben hacer otro commit. 
+
 Hasta ahora solo se ha trabajado de forma local en sus computadores. Pero para añadir el repositorio creado a una plataforma remota como GitHub deben hacerlo con: 
 
 ```console
