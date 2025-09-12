@@ -107,7 +107,7 @@ Recomiendo fuertemente, ya que a la larga es buena práctica, el que revisen con
 
 En este documento, por ahora solo se ha mencionado el procedimiento en GNU/Linux para una buena instalación básica de LaTeX, pero, una elección popular de sistema operativo también es Windows, a lo cual aquí tienen un [link](https://www.tug.org/texlive/windows.html) para la correcta instalación de TeX Live en Windows. Asegurarse de realizar la instalación completa de latexmk y los paquetes como los que mencioné en la instalación anterior.
 
-Después, pueden verificar en la CMD o PoerShell que los paquetes estén correctamente instalados con los siguientes comandos;
+Después, pueden verificar en la CMD o PowerShell que los paquetes estén correctamente instalados con los siguientes comandos;
 
 ```cmd
 $ pdflatex --version

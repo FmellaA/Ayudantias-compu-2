@@ -62,10 +62,10 @@ Date:   Thu Sep 4 23:40:56 2025 -0400
 
     Hola Mundo
 ```
-Este código es la identificación que tiene este commit. Por lo tanto, si por cualquier motivo hacen cambios y quieren volver al estado que estaban en el último commit hecho, solo deben hacer: 
+Este código es la identificación que tiene este commit. Por lo tanto, si por cualquier motivo hacen cambios en un archivo *file.py* y quieren volver al estado que estaban en el último commit, solo deben hacer: 
 
 ```console
-$ git restore
+$ git restore file.py
 ```
 
 Pero, si hicieron varios commits, y se dieron cuenta que se equivocaron en todos y quieren volver al commit *"Hola Mundo"*, solo tienen que buscar su código del commit y hacer: 
@@ -117,3 +117,30 @@ $ git push
 ```
 
 **Si estan colaborando, antes de empezar a trabajar, **SIEMPRE** recuerden hacer **git pull***
+
+Otra cosa que deben tener en consideración mientras colaboran son las ramas (*branches*). Pueden crear una branch que nazca desde la que estan: 
+
+```console
+$ git branch rama-1
+```
+
+Y pueden cambiarse a esa rama para trabajar en ella: 
+
+```console
+$ git switch rama-1
+```
+
+Podremos verlo más claro en [este](https://learngitbranching.js.org/?locale=es_AR) visualizador de git branches.
+
+Eventualmente cuando quieran unir su trabajo que esten realizando con la rama principal. Deberan cambiarse a esa rama (en mi caso se llama main): 
+
+```console
+$ git switch main
+```
+
+Y unir el trabajo hecho: 
+
+```console
+$ git merge rama-1
+```
+Por tanto, pueden nombrar las ramas como la zona donde los diferentes colaboradores van a aportar, o dividirlas en el tipo de trabajo que van a realizar en cada una. Para gustos, colores. 
