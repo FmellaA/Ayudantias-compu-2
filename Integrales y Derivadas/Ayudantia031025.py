@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import os
 
 '''
-Descargue los datos "Datos01.txt", corra este código y proponga una derivada finita numérica para aplicarla a los datos. 
+Descargue los datos "Datos01.txt", corra este código y proponga una derivada finita numérica para aplicarla a los datos. Al correr el código tenga precaución de la ubicación del archivo de datos, del código y la ubicación en la que esta la terminal. 
 '''
 
 
