@@ -39,7 +39,7 @@ Para configurar cada uno les recomendamos buscar la documentación de cada paque
 ### [2] Para usar sub-archivos y un archivo principal
 
 ```latex
-\usepackage{subfiles}
+\usepackage{subfiles} [2]
 ```
 Este paquete se usa creando un archivo principal, de preferencia algo como main.tex, el cual alojará todos sus paquetes y sus subfiles de la misma forma;
 ```latex
@@ -97,5 +97,5 @@ Este paquete es súmanente útil a la hora de crear imágenes simples de caracte
 ```
 Abran un documento de LaTeX y añadan el siguiente preámbulo;
 ```latex
-\usepackage{tikz}
+\usepackage{tikz} [3]
 ```
