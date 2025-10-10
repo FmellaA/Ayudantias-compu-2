@@ -24,10 +24,10 @@ plt.legend()
 plt.legend()
 plt.show()
 
-
+'''
 with open("output.txt", "w") as file: 
         for i in range(len(t)):
-            file.write(f"{t[i]}\t{funcion de su preferencia(t[i])}\n")
+            file.write(f"{t[i]}\t{funcion de su preferencia(t[i])}\n")'''
 
 
 
