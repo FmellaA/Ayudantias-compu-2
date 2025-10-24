@@ -4,7 +4,7 @@ from matplotlib.animation import FuncAnimation
 from MetodosEDOs import runge_kutta_4  #Run this from the carpet above in the terminal
 
 # Number of double pendulums to simulate
-Number = 10  # Set the number of pendulums you want to simulate
+Number = 2  # Set the number of pendulums you want to simulate
 dt = 0.05  # Time step
 t = np.linspace(0, 30, int(30/dt))  # Defining the time array
 
@@ -40,10 +40,10 @@ ax.set_ylim(-2, 2)  # Set y-limits for the plot
 lines = [ax.plot([], [], 'o-', lw=2)[0] for _ in range(Number)]  # 'o-' creates lines with markers
 
 # Define the initial conditions for all pendulums
-initial_conditions = [np.array([np.pi/2 ,
-                                 np.pi/2 ,
-                                   dt/4 *i,
-                                     0])
+initial_conditions = [np.array([np.pi ,
+                                 np.pi ,
+                                   2 + dt*i,
+                                     1])
                                        for i in range(Number)]
 
 # Use the Runge-Kutta method to get the results for each pendulum

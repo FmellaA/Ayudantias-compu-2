@@ -45,9 +45,9 @@ plt.style.use("dark_background") #Use el que más le guste, a mi me duelen los o
 m1 , m2 , l1 , l2 , g = 1 ,2 ,3 ,1 ,9.81
 
 initial_conditions = np.array([np.pi/4,
-                                np.pi/4,
+                                np.pi/2,
                                 0,
-                                0])
+                                2])
 #Ahora cocinamos el resultado usando el método de Runge-Kutta de 4to orden, en este caso estará explícito en el códido pero se recomiento usarlo como un módulo para limpieza;
 def runge_kutta_4(f, u0, t, *args, **kwargs):
     """
