@@ -1,5 +1,8 @@
 ## **Ayudantía 14/11** -  *Física computacional II*
-
+#### **Actividad :Erorr de método de Newton-Raphson en ceros múltiples (a mano)**
+Encuentre el orden de error del método de Newton-Raphson cuado se encuentra un cero múltiple; para un cero múltiple se cumple que; 
+$$ f(x^*) = f'(x^*) = 0 $$
+Usando el algoritmo del método de la bisección, encuentre el error absoluto del método. Recuerde como funciona el método y lo que hace en cada iteración para derivar el error.
 #### **Actividad: Fractal de Newton**
 
 
