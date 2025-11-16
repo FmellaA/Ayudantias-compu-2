@@ -10,10 +10,10 @@ def Newton(f,h,x0,eps=1e-4):
     return x0
 
  
-l = lambda x: x**4 -1
-dl = lambda x: 4*x**3
+l = lambda x: np.exp(1)*x**5-4
+dl = lambda x: 5*np.exp(1)*x**4    
 
-re, im = np.mgrid[-10:10:300j, -10:10:300j] #ahi el j dice que tenga 10 elementos
+re, im = np.mgrid[-10:10:500j, -10:10:500j] #ahi el j dice que tenga 10 elementos
 
 x0 = re + 1j*im
 

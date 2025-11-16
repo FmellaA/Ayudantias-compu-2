@@ -2,7 +2,22 @@
 #### **Actividad :Erorr de método de Newton-Raphson en ceros múltiples (a mano)**
 Encuentre el orden de error del método de Newton-Raphson cuado se encuentra un cero múltiple; para un cero múltiple se cumple que; 
 $$ f(x^*) = f'(x^*) = 0 $$
-Usando el algoritmo del método de la bisección, encuentre el error absoluto del método. Recuerde como funciona el método y lo que hace en cada iteración para derivar el error.
+Usando el algoritmo del método de la bisección, encuentre el error absoluto del método. Recuerde como funciona el método y lo que hace en cada iteración para derivar el error. El método de Newton-Raphson para encontrar ceros funciona de la siguiente manera;
+$$ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}  $$
+Y como ya vimos, si $x^*$ corresponde a un cero múltiple, entonces tanto la función como la derivada se anulan. Para encontrar el error hagamos serie de Taylor alrededor de $x_n=x^* + \epsilon_n$, primero para la función
+$$ f(x^* + \epsilon_n) = f(x^*)  + f'(x^*)\epsilon_n +  \frac{1}{2} f''(x^*)\epsilon_n^2 + \frac{1}{3!}f'''(\xi)\epsilon_n^3 $$
+Luego hacemos lo mismo pero con la derivada de la función f;
+$$  f'(x^*+\epsilon_n) = f'(x^*) + f''(x^*)\epsilon_n + \frac{1}{2}f'''(\eta)\epsilon_n^2 $$
+Luego, reemplazamos esto en la relación de recursisivad que da origen al método de Newton-Raphson;
+$$ \epsilon_{n+1} = \epsilon_n - \frac{\frac{1}{2}f''(x^*)\epsilon_n + \frac{1}{3!}f'''(\xi)\epsilon_n^2}{f''(x^*) + \frac{1}{2}f'''(\eta)\epsilon}  $$
+Ahora, como tenemos términos muy pequeños, podemos usar la expansión en series (para x<<1);
+$$  \frac{1}{1+x} \sim 1 - x $$
+Con lo cual, podemos expresar la fracción dentro de la relación de recursión como;
+$$ \epsilon_{n+1} = \epsilon_n  \left[ 1 - \frac{(\frac{1}{2}f''(x^*) + \frac{1}{3!}f'''(\xi)\epsilon_n)}{f''(x^*)} \left( 1 - \frac{1}{2} \frac{f'''(\eta)}{f''(x^*)}\epsilon_n \right) \right]  $$
+Lo que, como $\epsilon_n<<1$ es un número muy pequeño, entonces podemos tomar solo los términos lineales;
+$$  \epsilon_{n+1} = \frac{1}{2}\epsilon_n + O(\epsilon_n^2) $$
+Así, hemos demostrado que el error en el método de Newton-Raphson, cuando los ceros son múltiples, es lineal, que es mucho peor con lo que pasa cuando los ceros no son múltiples, en donde el error es del tipo;
+$$ \epsilon_{n+1} = k\epsilon_n^2 $$
 #### **Actividad: Fractal de Newton**
 
 
