@@ -5,9 +5,10 @@ import matplotlib.pyplot as plt
 ###Lagrange Interpolation 
 # considerando los datos como (x[j], y[j]). con n+1 datapoints:
 
-n = len(x)-1
 
-def f(o):
+
+def Lagrangian(o,x,y):
+  n = len(x)-1
   sum = 0
 
   for i in range(n+1):
